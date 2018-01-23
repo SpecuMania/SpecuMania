@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SpecuMania - Home of Blockchain Speculation Games</title>
+  <meta name="description" content="SpecuMania is a fun and entertaining Blockchain speculation game. Powered by the Ethereum blockchain.">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/css/main_style.css">
+  
+  
+  <script src='http://connect.facebook.net/en_US/all.js'></script>
+  <script>
+    //SKYPE
+    // Place this code in the head section of your HTML file 
+    (function(r, d, s) {
+      r.loadSkypeWebSdkAsync = r.loadSkypeWebSdkAsync || function(p) {
+        var js, sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(p.id)) { return; }
+        js = d.createElement(s);
+        js.id = p.id;
+        js.src = p.scriptToLoad;
+        js.onload = p.callback
+        sjs.parentNode.insertBefore(js, sjs);
+      };
+      var p = {
+        scriptToLoad: 'https://swx.cdn.skype.com/shared/v/latest/skypewebsdk.js',
+        id: 'skype_web_sdk'
+      };
+      r.loadSkypeWebSdkAsync(p);
+    })(window, document, 'script');
+  </script>
+
+</head>
+<body>
+  <div id="SpecumaniaBanner" class="row center">
+    <div class="col-md-12">
+      <h1 class="KarmaFuture">=SPECUMANIA=</h1>
+      <p class="karmaStructure">Home of Blockchain Speculation Games</p>
+    </div>
+  </div>
+  <div id="SpecumaniaDesc" class="row center">
+    <div class="col-md-12">
+      <h3 class="pixelFlag">{ Intro }</h3>
+      <p class="karmaStructure justified fadeIt">2018 history repeats. Humans are still morons chasing after the big money. Stumbeling over and destroying everything. After the .com bubble uninformed investors are fueling a new bubble. The Blockchain bubble. Nearly everything out in the blockchain universe is useless, not needed, inefficent or just part of the big fat bubble. Mooncoins will be falling stars but not pretty to watch.</p> 
+      <p class="karmaStructure justified tippedIn">Thus, if you want huge amounts of ether and a shit ton of risk. Here it is. A new kind of game evolved. Forget about scam ICOs or useless crypto games with kittens. It's all kiddies stuff. Blow out your crypto like a real men!</p>
+      <p class="karmaStructure justified fadeIt">Join the real men's world - get into the sepculation war. Speulate harder, stronger and more tactical than ever.</p>
+      <p class="karmaStructure center fadeIt"> Get the pot you deserve on </p>
+    </div>
+  </div>
+
+  <div id="GamesDesc" class="jumbotron center">
+    <p class="center" style="font-size: 3em;"><i class="fa fa-gavel"></i></p>
+    <h3  class="gameBoy" style="margin-bottom: 50px;">Diabolic Auction</h3>
+    <p class="lead karmaStructure justified">The game is easy. You can place as many bids as you want. You have a timelimit of 666 blocks to place your bids. All your bids are accumulated (summed up). The account with the largest sum will get the NEXT pot.</p>
+    <p class="lead karmaStructure center" style="margin-bottom: 20px;">Share the game and make your pot bigger!</p>
+    <p class="socialsShareList" style="font-size: 1.3em;">
+      <a href="whatsapp://send?text=Ethereum%20blockchain%20game%20%3A%29%20http%3A%2F%2Fwww.specumania.com" data-action="share/whatsapp/share" target="_blank">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+      </a>
+      <a href="https://t.me/share/url?url=http%3A%2F%2Fwww.specumania.com&text=Ethereum%20blockchain%20game%20%3A%29%20" data-action="share/whatsapp/share" target="_blank">
+        <i class="fa fa-telegram" aria-hidden="true"></i>
+      </a>
+      <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.specumania.com&p[title]=SpecuMania!&p[summary]=SpecuMania!" target="_blank">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/home?status=www.specumania.com" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      <a href="https://plus.google.com/share?url=www.specumania.com" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+      </a>
+      <span class='skype-share' data-href='http://www.specumania.com' data-lang='' data-text='Hey :) #1 blockchain game!' data-style='' target="_blank">
+        <i class="fa fa-skype" aria-hidden="true"></i>
+      </span>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.specumania.com&title=SpecuMania&summary=Best%20Blockchain%20Games&source=SpecuMania" target="_blank">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:?subject=%231%20blockchain%20game%21&amp;body=www.specumania.com" target="_blank">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </a>
+    </p>
+    <div id="potsizeWrapper1" style="display: none; margin: 20px 0 20px 0;">
+      <p class="gameBoy">Current Pot size:</p>
+      <p id="potsizeGame1" class="gameBoy"></p>
+    </div>
+    <p><a class="btn btn-lg btn-success gameBoy" href="DiabolicAuction/index.html" role="button">Start</a></p>
+
+  </div>
+
+  <div id="GamesDesc" class="row center">
+    <div class="col-md-12">
+      <p class="gameBoy" style="font-size: 1em;">With growing populaity we will add new games - stay tuned!</p>
+      <p class="socialsFollowList">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <a href="https://plus.google.com/109094072120402059497" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        <i class="fa fa-btc" aria-hidden="true"></i>
+      </p>
+    </div>
+  </div>
+
+  <!-- <div id="GameSelection" class="row">
+    <div class="col-md-4">
+      <p><i class="fas fa-rocket"></i></p>
+      <p>Instant</p>
+    </div>
+    <div class="col-md-12" style="text-align: center;">
+      <p><i class="fas fa-fighter-jet"></i></p>
+      <p>Daytrader</p>
+    </div>
+    <div class="col-md-4">
+      <p><i class="fas fa-coffee"></i></p>
+      <p>Investor</p>
+    </div>
+  </div> -->
+  
+  <div id="secNotice" class="row center">
+    <div class="col-md-12">
+      <h3 class="pixelFlag">{ PLEASE NOTE }</h3>
+      <div class="karmaStructure justified" style="width: 60%; margin: auto;">
+        <p>For security reasons, we do not want to stack up high amounts of ether in our contracts. Therefore you NEED TO WITHDRAW your ether. You can withdraw your ether after a confirmation period of 20 blocks (approx. 5 minutes).</p>
+        <p class="center">You have 100 days to withdraw your ether!</p>
+        <p>If you do not withdraw your ether in between the confirmation period and the 100 day limit, we will clear out your account and the ether is gone!</p>
+        <p class="center">Therefore WITHDRAW YOUR ETHER IF YOU GOT A POT</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="secNotice" class="row center">
+    <div class="col-md-12">
+      <h3 class="pixelFlag">{ How to play }</h3>
+    </div>
+    <div class="col-md-4">
+      <p class="gameBoy">1</p>
+      <p class="gameBoy">Install Metamask</p>
+      <p class="karmaStructure fadeIt">MetaMask is a chrome extension and is needed to play games like SpecuMania in your browser. The setup is easy and you have a lightwight ethereum wallet. You can also use web3 enabled browsers like MIST.
+        <p><a class="btn btn-lg btn-success gameBoy" href="https://metamask.io" role="button"  target="_blank">Get MetMask</a></p>
+      </div>
+      <div class="col-md-4">
+        <p class="gameBoy">2</p>
+        <p class="gameBoy">Get Ether</p>
+        <p class="karmaStructure fadeIt">To place bids you need the crypto currency ethereum. If you do not have ethereum or know someone who can send you some ether, you need to buy it on offical exchanges. Just open an account. Most of the time you can also buy a variety of other crypto currencies on exchanges like bitcoin. If you already have bitcoins you can use an exchange like <a href="https://shapeshift.io/#/coins" target="_blank">shapeshift</a> to change bitcoin into ethereum.</p>
+        <p class="karmaStructure fadeIt">Here is a list of exchanges you may want to use</p>
+        <ul class="karmaStructure" style="list-style: none; padding:0;">
+          <li><a href="https://www.bitstamp.net" target="_blank">Bitstamp</a></li>
+          <li><a href="https://bittrex.com" target="_blank">Bittrex</a></li>
+          <li><a href="https://www.bitfinex.com" target="_blank">Bitfinex</a></li>
+          <li><a href="https://www.kraken.com" target="_blank">Kraken</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <p class="gameBoy">3</p>
+        <p class="gameBoy">Transfer your ether and Start playing</p>
+        <p class="karmaStructure fadeIt">Transfer your ether from your exchange to your MetaMask address. Just log in into MetaMask and start playing on our websites!</p>
+        <p class="karmaStructure fadeIt">We currently offer one game. With rising popularity we will publish more games! Support our developement and play our game - Have fun!</p>
+        <p><a class="btn btn-lg btn-success gameBoy" href="http://www.specumania666.specumania.com" role="button">Play</a></p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/web3.min.js"></script> 
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- load ABIs -->
+    <script type="text/javascript"  src="assets/js/GameABI1.js"></script>
+    <script type="text/javascript"  src="assets/js/app.js"></script>
+  </body>
+  </html>

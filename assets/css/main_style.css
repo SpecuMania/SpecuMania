@@ -1,0 +1,135 @@
+@font-face {
+  font-family: '{PixelFlag}';
+  src: url('../fonts/pixelFlag/PixelFlag.woff2') format('woff2'),
+       url('./fonts/pixelFlag/PixelFlag.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EarlyGameBoy';
+  src: url('../fonts/gameboy/Early-GameBoy.woff2') format('woff2'),
+       url('../fonts/gameboy/Early-GameBoy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'karmafuture';
+    src: url('../fonts/karma/karma_future-webfont.woff2') format('woff2'),
+         url('../fonts/karma/karma_future-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'KarmaSuture';
+  src: url('../fonts/karma2/KarmaSuture-Regular.woff2') format('woff2'),
+       url('../fonts/karma2/KarmaSuture-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+	padding: 20px;
+}
+
+h1{
+	font-size: 6em;
+    color: #000;
+}
+
+p{
+	margin: 0px 0 10px 0;
+}
+
+a{
+  text-decoration: underline;
+  font-size: bold;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  font-size: bold;
+  color: white;
+  background-color: black;
+}
+
+
+.center{
+	text-align: center;
+}
+
+.KarmaFuture{
+	font-family: 'karmafuture';
+}
+
+.gameBoy{
+	font-family: 'EarlyGameBoy';
+}
+
+.pixelFlag{
+	font-family: '{PixelFlag}';
+  font-size: 2em;
+}
+
+.karmaStructure{
+	font-family: 'KarmaSuture';
+}
+
+.justified{
+	text-align: justify;
+}
+
+.tippedIn{
+	margin-left:50px;
+	margin-right: 50px;
+}
+
+.jumbotron{
+	padding: 10%;
+}
+
+.fadeIt{
+	color: #737373;
+}
+
+.row{
+	margin: 0 0 4% 0;
+}
+
+#SpecumaniaBanner{
+	margin: 0 0 30px 0;
+}
+
+.socialsFollowList{
+	font-size: 2em;
+}
+
+.btn{
+  text-decoration: none;
+}
+
+.socialsShareList a{
+  text-decoration: none;
+  padding: 3px;
+  margin: 0;
+}
+
+.btn-success {
+    color: #000;
+    background-color: #FFF;
+    border-color: #000;
+}
+
+#GamesDesc .btn-success{
+  color: white;
+      background-color: red;
+      border-color: red;
+}
+#GamesDesc .btn-success:hover{
+      color: black;
+      background-color: red;
+      border-color: red;
+}

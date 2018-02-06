@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>SPECUMANIA</title>
+  <title>SpecuMania - DiabolicAuction</title>
   <meta name="description" content="The no1 blockchain game">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
@@ -42,7 +42,7 @@
 
   <body>
       <div id="BuyTheLeadBanner">
-	<span class="BannerStyle">=Diabloic Auction=</span>
+	<span class="BannerStyle">=Diabolic Auction=</span>
 	<p>#1 blockchain speculation game</p>
 	<!-- <img src="assets/img/unicornLeft.jpg" width="50" height="50" />
 	<span class="BannerStyle"><span style="color: #fc4693;">B</span><span style="color:#1860e2;">u</span>y <span style="color: #84857f;">T</span><span style="color:#5a4049;">h</span>e <span style="color:#1860e2;">L</span><span style="color:#fc4693;">e</span>a<span style="color:#ddadbd;">d</span></span>
@@ -86,9 +86,9 @@
 		</a>
 	</p>
 	<p class="gameboy" style="font-size: 0.4em; margin: 20px 0 20px 0;">or join us</p>
+	<i class="fa fa-reddit" aria-hidden="true"></i>
 	<i class="fa fa-twitter" aria-hidden="true"></i>
 	<a href="https://plus.google.com/109094072120402059497" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-	<i class="fa fa-btc" aria-hidden="true"></i>
 </div>
       <section id="dashboard">
       <h3 class="blockHead">{ dashboard }</h3>
@@ -101,20 +101,24 @@
 <div id="chooseGame">
 	<p class="gameboy">( Choose your favorite Roundtime (</p>
 	<ul class="topnav" style="max-width: 500px; margin: auto;">
-		<li><a href="../v101/index.html">101 blocks</a></li>
-		<li><a href="../v666/index.html">666 blocks</a></li>
-		<li><a href="../v1337/index.html">1337 blocks</a></li>
+		<li><a href="?kind=dev">Development</a></li>
+		<li><a href="?kind=13">Lightening fast - 13 blocks</a></li>
+		<!-- <li><a href="../v101/index.html">Beginners - 101 blocks</a></li> -->
+		<li><a href="?kind=666">Classic - 666 blocks</a></li>
+		<!-- <li><a href="../v1337/index.html">Leet - 1337 blocks</a></li> -->
 	</ul>
+	<span class="roundInfos">Current roundtime: <b id="RoundTime"></b></span>
 </div>
 <div id="liveDashboard">
 	<div id="Roundcounter" class="content">
+		<p class="gameboy">This is round</p>
 		<p class="roundCounterDisplay">#..please wait</p>
 		<div>
-			<p class="gameboy">Pot est. </p> 
+			<p class="gameboy">Pot size</p> 
 			<p><b id="info_potSize" style="font-size: 1.2em;">..updating<sup>ETH</sup></b></p>
-			<span class="roundInfos" id="TotalRoundBids">Total bids: ..updating - </span><span class="roundInfos">Roundtime: <b id="RoundTime"></b></span>
+			<span class="roundInfos" id="TotalRoundBids">Total bids: ..updating - </span>
 			<p class="noMargin roundInfos" style="font-size: 1em;"><b id="blockCountDown">..updating blocks</b> left in this round</p>
-			<p class="gameboy">Leading bid est.</p>
+			<p class="gameboy">Leading bid</p>
 			<p style="font-size: 1.2em;" id="leadingBid"><b>..updating</b><sup><b>ETH</b></sup></p>
 		</div>
 	</div>
@@ -158,7 +162,7 @@
 		<input id="accountCheckPot" type="text" placeholder="Enter your account (0x...)" />
 		<p>You can withdraw: <b id="potSizeOfAcc">0</b><sup>ETH</sup><p>
 	</div>
-	<p>These are the last round's leaders, who did not withdrawed yet. Please withdraw your ether!</p>
+	<p>These are the last round's leaders</p>
 	<table>
 		<thead>
 			<tr>
@@ -171,12 +175,12 @@
 	</table>
 
 	<p style="color:red;margin: 0;">IMPORTANT</p>
-	<div class="textcontent">
-		<p style="font-size: 0.9em;">Please withdraw your ether! Just click the black button below (or send 0<sup>ETH</sup> to the "payDay" function). <b>Provide enough gas to execute the transaction!</b> We do not want to stack up huge ether amounts in this smart contract! Funds will only stay on hold for winner 120 days. There is no way to withdraw your ether after 120 days! The shit is gone! </p>
+	<div id="widthDrawYourETH" class="textcontent">
+		<p style="font-size: 0.9em;">Please withdraw your ether! Just click the black button below. <b>Provide enough gas to execute the transaction!</b> We do not want to stack up huge ether amounts in this smart contract! Funds will only stay on hold for winners 100 days. There is no guaranteed way to withdraw your ether after 100 days! The shit is gone! </p>
 		<p style="text-align: center;"><b>Thus, WITHDRAW your ether!</b></p>
 		<p>If you were a leader, click the button below to withdraw your ether. Provide enough gas to execute the transaction!</p>
 	</div>
-	<button id="withdrawBtn" class="btns">withdraw</button>
+	<p><button id="withdrawBtn" class="btns">withdraw</button></p>
 </div>
       </section>
       <section id="fame">
@@ -197,25 +201,22 @@
       <h3 class="blockHead" style="margin-top: 50px;">{ tutorial }</h3>
 <div id="tutorial" class="textcontent">
 	<p>The rules are easy. You are bidding on the NEXT round's pot. If the sum of your bids is largest, you get the NEXT (not the one your bids went in) pot. You can place as many bids as you like and all your bids are added up. To place your bids you have a limited time (by default 666 blocks). This limited bidding time is called "roundtime". The roundtime is measured in blocks ('cause we are on the blockchain, jeah!) - no seconds, minutes or hours.</p>
-	<p>Please note, that it takes some time until you bid is in the blockchain and thus valid! Pending bids are NOT valid! Also, there is a low chance that the blockchain change it states!</p>
+	<p>Please note, that it takes some time until you bid is in the blockchain and thus valid! Pending bids are NOT valid! 
+	<p><b>Also, there is a low chance that the blockchain change it states!</b></p>
 	<p>There are different versions of the game. They just differ in the round time. You can change the roundtime in your dashboard at the bottom (<a href="#chooseGame">here</a>).</p>
 	<p>Ok, here is an example:</p>
-	<p>You bid 12<sup>ETH</sup>. For now your bid is the highest. In the same round someone bids 13<sup>ETH</sup>. Now that other guy is the leader. To be the leader again you just need to bid more than 1<sup>ETH</sup> (because your bids are added up. Thus, e.g. 12<sup>ETH</sup>+1.1<sup>ETH</sup>). If you bid the same amount, the other guy will still be the leader. You need to bid more - not the same. Ok, let's say the sum of you bid was the largest in in round 6. Thus, you are the owner of the contract's pot in round 7. You do not need to do anything. Well, you can still bid on this pot to raise the total pot's size. Let's assume in round 7 there are 800 accounts bidding on average 6<sup>ETH</sup>. Thus, the pot you own is about 800 * 6<sup>ETH</sup>=4800<sup>ETH</sup> (There is a small comission kept back). After a confirmation time of 20 blocks you can go and withdraw your ether. Just press the black withdraw button <a href="">here</a>.</p>
+	<p>You bid 12<sup>ETH</sup>. For now your bid is the highest. In the same round someone bids 13<sup>ETH</sup>. Now the other guy is the leader. To be the leader again you just need to bid more than 1<sup>ETH</sup> (because your bids are added up. Thus, e.g. 12<sup>ETH</sup>+1.1<sup>ETH</sup>). If you bid the same amount, the other guy will still be the leader. You need to bid more - not the same. Ok, let's say the sum of you bid was the largest in in round 6. Thus, you are the owner of the contract's pot in round 7. You do not need to do anything. Well, you can still bid on this pot to raise the total pot's size. Let's assume in round 7 there are 800 accounts bidding on average 6<sup>ETH</sup>. Thus, the pot you own is about 800 * 6<sup>ETH</sup>=4800<sup>ETH</sup> (There is a small comission kept back). To get your ether, just press the black withdraw button <a href="#widthDrawYourETH">here</a>.</p>
 	<p>If your bid is not the highest or someone places a higher bid than yours, your ether remains in the pot. But you can bid as often as you want and your bids are added up. If you place bid (pending) but your bid ends up in a block after the round time ended, your bid will go into the next round's pot.</p>
 	
 	<p style="text-align: center;" class="gameboy">What do I need to participate?</p>
-	<p>There are two options. First, if you have <a href="https://github.com/ethereum/mist/releases" target="_blank">Mist</a>, <a href="https://metamask.io/" target="_blank">MetaMask</a> or any similar web3 client, you can simply use this website (you will see black buttons). If you do not see the black buttons or have problems to use them - try the second option.</p>
-	<p>Second, option is to use your ether wallet (<a href="https://github.com/ethereum/mist/releases" target="_blank">Ethereum Wallet</a> or <a href="https://github.com/ethereum/mist/releases" target="_blank">Mist</a>). You need to watch the smart contract and send your bid to the contract or the "placeBid" function. To withdraw you ether, send 0<sup>ETH</sup> to the "payDay" function. <a href="#gist" target="_blank">Here</a> is a gist with the conract address and a simplified ABI.</p>
-	<p></p>
-	<p>The second option is more complicated. We recommend using <a href="https://github.com/ethereum/mist/releases" target="_blank">Mist</a> or <a href="https://metamask.io/" target="_blank">MetaMask</a>.</p>
+	<p>Just install <a href="https://metamask.io/" target="_blank">MetaMask</a> and enjoy - you will see black buttons to play the game if you are logged into MetaMask.</p>
 	<p style="text-align: center;">That's all! </p>
     <p style="text-align: center;">If you have trouble or questions feel free to join our networks</p>
 </div>
 <p class="socialsList" style="font-size: 1.3em;">
-	<i class="fa fa-facebook" aria-hidden="true"></i>
+	<i class="fa fa-reddit" aria-hidden="true"></i>
 	<i class="fa fa-twitter" aria-hidden="true"></i>
 	<a href="https://plus.google.com/109094072120402059497" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-	<i class="fa fa-btc" aria-hidden="true"></i>
 </p>
 <p style="text-align: center;">or share us!</p>
 <p class="socialsList" style="font-size: 1.3em;">
@@ -259,39 +260,39 @@
 			<input type="checkbox" checked>
 			<i></i>
 			<h2 class="gameboy">How do I withdraw ether?</h2>
-			<p>We highly recommend using a web3 injected browser like <a href="https://github.com/ethereum/mist/releases" target="_blank">MIST</a> or your favorite Browser with <a href="https://metamask.io/" target="_blank">MetaMask</a>! If you are logged in, you should see a black "withdraw" button on this page. If you bought a pot you can withdraw it there. Please note you need to wait a 10 blocks (confirmation time) until you can withdraw!</p>
+			<p>We highly recommend using a web3 injected browser like <a href="https://github.com/ethereum/mist/releases" target="_blank">MIST</a> or your favorite Browser with <a href="https://metamask.io/" target="_blank">MetaMask</a>! If you are logged in, you should see a black "withdraw" button on this page. If you bought a pot you can withdraw it there.</p>
 			<p>If you do not have a web3 injected browser. The smart contract has a specific funtion called "payDay". You can send 0<sup>ETH</sup> to this function using your favorite software.</p>
 		</li>
 		<li>
 			<input type="checkbox" checked>
 			<i></i>
-			<h2 class="gameboy">I can not see any black buttons on the page!</h2>
+			<h2 class="gameboy">I can not see any black buttons (like bid or withdraw) on the page!</h2>
 			<p>Most likley you do not use <a href="https://github.com/ethereum/mist/releases" target="_blank">MIST</a> or the <a href="https://metamask.io/" target="_blank">MetaMask</a> extension or you are not logged in. Please check if you have an ethereum (main network) account and if you are logged in. If you still do not see the buttons please post a bug report in one of our social networks. If everything failes, check if you can use the functions "luckyChance" or "payDay" in your favorite wallet.</p>
 		</li>
-		<li>
+		<!-- <li>
 			<input type="checkbox" checked>
 			<i></i>
 			<h2 class="gameboy">How do I add and watch the smart contracts?</h2>
 			<p>If you can not use <a href="https://metamask.io/" target="_blank">MetaMask</a>, you can use a wallet that supports ethereum smart contracts like <a href="https://github.com/ethereum/mist/releases" target="_blank">EthereumWallet</a>. Click contracts and then watch. Enter the contract Name, address and ABI (copy the relevant parts form this <a href="#" target="_blank">gist</a>). If you set it up correctly, you now can use and watch the smart contract.</p>
-		</li>
+		</li> -->
 		<li>
 			<input type="checkbox" checked>
 			<i></i>
 			<h2 class="gameboy">Do the bids I send add up?</h2>
 			<p>Yes. The bids add up. The sum of all your bids are called stack. The leader is the one with the biggest stack.</p>
 		</li>
-		<li>
+		<!-- <li>
 			<input type="checkbox" checked>
 			<i></i>
 			<h2 class="gameboy">What is the smart contract's address and ABI interface</h2>
 			<p>We set up a gist with all the relevant information. Just copy the content of <a href="#" target="_blank">this gist</a>.</p>
-		</li>
+		</li> 
 		<li>
 			<input type="checkbox" checked>
 			<i></i>
 			<h2 class="gameboy">Is the contract verified?</h2>
 			<p>Yes, sure. This contract is implemented as secure as possible and verified on etherscan. We can not and we do not want to cheat on you. This game is fair and fun!</p>
-		</li>
+		</li> -->
 		<li>
 			<input type="checkbox" checked>
 			<i></i>
@@ -314,7 +315,7 @@
 			<input type="checkbox" checked>
 			<i></i>
 			<h2 class="gameboy">I placed a bid and I can not see it!</h2>
-			<p>On the blockchain in can happen, that transactions are not mined or need a long time to be mined. Therefore it can also happen that leaders can change after a round ends. That happens if blocks become invalid and replaced. If you do not understand how a blockchain works, go and make your homework.</p>
+			<p>On the blockchain in can happen, that transactions are not mined or need a long (VERY LONG) time to be mined. Therefore it can also happen that leaders can change after a round ends. That happens if blocks become invalid and replaced. If you do not understand how a blockchain works, go and make your homework.</p>
 		</li>
 		<li>
 			<input type="checkbox" checked>
@@ -329,17 +330,11 @@
 			<h2 class="gameboy">The pot size and the leading bid have an "e" like "1e-7<sup>ETH</sup>" in the number. What is that?</h2>
 			<p>That is just another way to say how many leading 0 the number has. The "e" stands for the "exponend".</p>
 		</li>
-		<li>
-			<input type="checkbox" checked>
-			<i></i>
-			<h2 class="gameboy">Why is pot size and leading bid just estimated - est.?</h2>
-			<p>In a blockchain you actually need enough blocks confirmation to say something for sure. Because these are the "live" blocks, it could be that the blockchain changes. If ou do not understand this answer please dive deeper in how the blockchain works. Google is your friend.</p>
-		</li>
 	</ul>
 </div>
       </section>
       <footer class="footer">
-    <p>&copy; blockchainentertainment</p>
+    <p>&copy; <a href="www.specumania.com">SpecuMania</a></p>
     <p>Project set up with lots of <span class="love">❤</span></p><p>enjoy :)</p>
 </footer>
 

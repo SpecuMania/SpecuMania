@@ -135,9 +135,9 @@
 	</div>
 	<div id="shortInfoCurrRound"  class="content">
 		<div id="BidsAndLeadersCurrentRound">
-			<div id="leaderBoard">
+			<div>
 				<h3 class="blockHead">{ leader board }</h3>
-				<table>
+				<table id="leaderBoardTable">
 					<thead>
 						<tr>
 							<th>rank</th>
@@ -163,7 +163,7 @@
 		<p>You can withdraw: <b id="potSizeOfAcc">0</b><sup>ETH</sup><p>
 	</div>
 	<p>These are the last round's leaders</p>
-	<table>
+	<table id="lastRoundWinsTable">
 		<thead>
 			<tr>
 				<th>account</th>
@@ -186,14 +186,17 @@
       <section id="fame">
       <div id="hallOfFame">
 	<h3 class="blockHead">{ Hall of fame }</h3>
-	<table>
-		<tr>
-			<th>rank</th>
-			<th>account</th>
-			<th>pot</th>
-			<th>bid</th>
-			<th>win/bid ratio</th>
-		</tr>
+	<table id="hallofFameTable">
+		<thead>
+			<tr>
+				<th>rank</th>
+				<th>account</th>
+				<th>pot</th>
+				<th>bid</th>
+				<th>win/bid ratio</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
 	</table>
 </div>
       </section>
